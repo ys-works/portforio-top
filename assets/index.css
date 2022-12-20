@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+
+html {
+    font-size: 62.5%;
+    font-feature-settings: "palt" 1;
+    width: calc(100vw - calc(100vw - 100%));
+}
+
+body {
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-family: "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "HiraKakuProN-W3", "Meiryo", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+a:hover {
+    cursor: pointer;
+    transition: 0.5s all;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    opacity: 0.7;
+}
+
+i {
+    padding: 0 2%;
+}
+
+li {
+    list-style: none;
+}
+
+/*---------------------------------------------*/
+
+.wrap {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.title-wrap {
+    padding: 0 3%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border-bottom: 1px solid #333;
+    height: 80px;
+    transform: perspective(300px) rotateY(20deg);
+}
+
+h1 {
+    color: #333;
+    font-size: 7rem;
+    font-weight: bold;
+    -webkit-box-reflect: below -64px -webkit-gradient(linear, left bottom, left top, from(#333), to(transparent));
+}
+
+.video-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    opacity: 0.5;
+
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section1,
+.section2 {
+    width: 35%;
+    color: #333;
+    transform-style: preserve-3d;
+}
+
+h2 {
+    margin: 10px auto;
+    font-size: 2.5rem;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+.sec1-inner,
+.sec2-inner {
+    margin: auto;
+    width: 60%;
+    min-width: 400px;
+}
+
+.sec1-inner {
+    height: 20vh;
+    background: rgba(231, 208, 169, 0.2);
+    text-align: center;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    transform: perspective(500px) rotateX(5deg) rotateY(30deg) rotateZ(-10deg);
+}
+
+.sec1-inner:hover,
+.sec2-inner:hover {
+    transition: 0.4s all !important;
+    transform: perspective(1000px) rotateY(0deg) rotateZ(0deg) !important;
+}
+
+.sec2-inner {
+    height: 30vh;
+    background: rgba(231, 208, 169, 0.2);
+    text-align: center;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    transform: perspective(500px) rotateX(15deg) rotateY(-30deg) rotateZ(12deg);
+}
+
+.sec2-inner ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sec2-inner ul li {
+    margin: 0 0 5px 0;
+    font-size: 1.7rem;
+}
+
+footer {
+    width: 100%;
+    padding: 0 0 10px 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #333;
+}
+
+.word {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.rect {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #333;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 900px) {
+
+    .title-wrap {
+        top: 5%;
+    }
+
+    main {
+        padding: 25vh 0 10vh 0;
+        flex-direction: column;
+    }
+
+    .section1,
+    .section2 {
+        margin: 5% 10% 0 0;
+    }
+
+    .sec2-inner {
+        transform: perspective(600px) rotateX(15deg) rotateY(-20deg) rotateZ(12deg);
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    .title-wrap {
+        height: 47px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        -webkit-box-reflect: below -29px -webkit-gradient(linear, left bottom, left top, from(#333), to(transparent));
+    }
+
+    .section1,
+    .section2 {
+        width: 100%;
+        margin: 5% auto;
+    }
+
+    .sec1-inner,
+    .sec2-inner {
+        min-width: 80vw;
+        z-index: 99;
+    }
+
+    .g-item1 a {
+        font-size: 1.4rem;
+    }
+
+    .g-item2 {
+        font-size: 1.4rem;
+    }
+
+}
