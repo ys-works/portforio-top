@@ -135,7 +135,7 @@ h2 {
     background: rgba(231, 208, 169, 0.2);
     text-align: center;
     border: 1px solid rgba(51, 51, 51, 0.2);
-    transform: perspective(500px) rotateX(5deg) rotateY(30deg) rotateZ(-10deg);
+    /* transform: perspective(500px) rotateX(5deg) rotateY(30deg) rotateZ(-10deg); */
 }
 
 .sec1-inner:hover,
@@ -145,11 +145,12 @@ h2 {
 }
 
 .sec2-inner {
-    height: 30vh;
+    height: 100%;
+    padding-bottom: 30px;
     background: rgba(231, 208, 169, 0.2);
     text-align: center;
     border: 1px solid rgba(51, 51, 51, 0.2);
-    transform: perspective(500px) rotateX(15deg) rotateY(-30deg) rotateZ(12deg);
+    /* transform: perspective(500px) rotateX(15deg) rotateY(-30deg) rotateZ(12deg); */
 }
 
 .sec2-inner ul {
