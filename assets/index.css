@@ -63,17 +63,17 @@ li {
     padding: 0 3%;
     position: absolute;
     top: 10%;
-    left: 10%;
+    left: 15%;
     border-bottom: 1px solid #333;
     height: 80px;
-    transform: perspective(300px) rotateY(20deg);
 }
 
 h1 {
     color: #333;
     font-size: 7rem;
     font-weight: bold;
-    -webkit-box-reflect: below -64px -webkit-gradient(linear, left bottom, left top, from(#333), to(transparent));
+    letter-spacing: 0.4rem;
+    -webkit-box-reflect: below -64px -webkit-gradient(linear, left bottom, left top, from(#666), to(transparent));
 }
 
 .video-wrap {
@@ -115,23 +115,38 @@ main {
     transform-style: preserve-3d;
 }
 
+.sec1-inner,
+.sec2-inner {
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 h2 {
     margin: 10px auto;
     font-size: 2.5rem;
     display: inline-block;
     overflow: hidden;
-
 }
 
-.sec1-inner,
-.sec2-inner {
-    margin: auto;
-    width: 60%;
-    min-width: 400px;
+.sec1-inner ul {
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+    padding-bottom: 30px;
+}
+
+.sec1-inner ul li {
+    margin: 10px 0;
 }
 
 .sec1-inner {
-    height: 20vh;
+    height: 100%;
     background: rgba(231, 208, 169, 0.2);
     text-align: center;
     border: 1px solid rgba(51, 51, 51, 0.2);
